@@ -1,0 +1,14 @@
+set-name: 'Zephyr-Scratchpad'
+
+hart-entry-points: {
+  u54_1: '0xA080000',
+}
+
+payloads:
+  build/zephyr/zephyr.elf:    {
+    exec-addr: '0xA080000',
+    owner-hart: u54_1,
+    priv-mode: prv_m,
+    skip-opensbi: true,
+    payload-name: "zephyr"
+}

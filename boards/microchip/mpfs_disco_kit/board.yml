@@ -1,0 +1,8 @@
+board:
+  name: mpfs_disco_kit
+  vendor: microchip
+  socs:
+  - name: polarfire
+    variants:
+    - name: "smp"
+    - name: "smp_scratchpad"

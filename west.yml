@@ -1,0 +1,18 @@
+# Copyright (c) 2024 Microchip Technologies
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  self:
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: 66630961627f4d8625e2dbe1cb7afe4abd690b2e # v3.7.0-rc1
+      import:
+        name-allowlist:
+          - hal_microchip

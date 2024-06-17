@@ -1,0 +1,5 @@
+# Copyright (c) 2024 Brett Witherspoon
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_MPFS_DISCO_KIT
+	select SOC_POLARFIRE

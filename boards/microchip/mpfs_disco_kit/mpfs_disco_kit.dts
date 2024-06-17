@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2024 Brett Witherspoon
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <microchip/mpfs.dtsi>
+
+/ {
+	model = "Microchip PolarFire-SoC Discovery Kit";
+	compatible = "microchip,mpfs-disco-kit", "microchip,mpfs";
+
+	chosen {
+		zephyr,console = &uart4;
+		zephyr,shell-uart = &uart4;
+		zephyr,sram = &sram1;
+	};
+};
+
+&uart4 {
+	current-speed = <115200>;
+	clock-frequency = <150000000>;
+	status = "okay";
+};
