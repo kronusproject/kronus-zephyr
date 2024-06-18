@@ -3,7 +3,7 @@
 ## Single HART (E51)
 
 ```bash
-west build -p -b mpfs_disco_kit kronus/apps/smp
+west build -p -b mpfs_disco_kit zephyr/samples/hello_world
 ```
 
 ```bash
@@ -12,12 +12,24 @@ west build -t run
 
 ## SMP (U51_1..4)
 
+```bash
+west build -b mpfs_disco_kit/polarfire/smp_scratchpad zephyr/samples/hello_world
+```
+
+```bash
+west build -t run
+```
+
 ```shell
 west blobs fetch
 ```
 
 ```shell
 west generate-payload configs/zephyr_smp_scratchpad.yaml build/hss-payload.bin
+```
+
+```shell
+sudo bmaptool copy --nobmap build/hss-payload.bin /dev/sd?
 ```
 
 ## Renode
