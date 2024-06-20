@@ -60,6 +60,11 @@ break main
 continue
 ```
 
+```shell
+sudo cp 70-mpfs-disco-kit.rules /etc/udev/rules.d/
+sudo udevadm control --reload
+```
+
 # References
 
 - https://github.com/polarfire-soc/zephyr-applications
