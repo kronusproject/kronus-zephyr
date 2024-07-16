@@ -1,0 +1,17 @@
+:name: mpfs-disco-kit
+:description: This script is prepared to run Zephyr on a PolarFire SoC Discovery Kit board.
+
+$name?="mpfs-disco-kit"
+
+using sysbus
+mach create $name
+machine LoadPlatformDescription $ORIGIN/mpfs-disco-kit.repl
+
+showAnalyzer mmuart4
+#e51 PerformanceInMips 80
+
+macro reset
+"""
+    sysbus LoadELF $elf
+"""
+runMacro $reset

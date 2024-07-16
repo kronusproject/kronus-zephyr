@@ -1,0 +1,12 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: fd0e46506fabd4c0c91ecb336a39cb6a6aa2b270 # v3.7.0-rc3
+      import:
+        name-allowlist:
+          - hal_microchip

@@ -1,0 +1,12 @@
+identifier: mpfs_disco_kit/polarfire/smp
+name: Microchip PolarFire Discovery kit (SMP)
+type: mcu
+arch: riscv
+toolchain:
+  - zephyr
+ram: 3840
+testing:
+  ignore_tags:
+    - net
+    - bluetooth
+vendor: microchip
